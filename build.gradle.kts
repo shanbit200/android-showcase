@@ -1,4 +1,5 @@
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
+import io.gitlab.arturbosch.detekt.detekt
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 
@@ -12,6 +13,7 @@ buildscript {
 
         // Ktlint Gradle
         maven("https://plugins.gradle.org/m2/")
+
     }
 
     dependencies {
@@ -19,6 +21,8 @@ buildscript {
         classpath(GradleDependency.KOTLIN)
         classpath(GradleDependency.SAFE_ARGS)
         classpath(GradleDependency.KTLINT_GRADLE)
+        classpath("com.vanniktech:gradle-android-junit-jacoco-plugin:0.15.0")
+//        classpath("com.vanniktech:gradle-android-junit-jacoco-plugin:0.16.0-20190831.151000-2")
     }
 }
 
@@ -26,7 +30,17 @@ plugins {
     id(GradlePluginId.DETEKT) version GradlePluginVersion.DETEKT
     id(GradlePluginId.KTLINT_GRADLE) version GradlePluginVersion.KTLINT_GRADLE
     id(GradlePluginId.GRADLE_VERSION_PLUGIN) version GradlePluginVersion.GRADLE_VERSION_PLUGIN
+    id("com.vanniktech.android.junit.jacoco") version "0.15.0"
+//    id("com.vanniktech.android.junit.jacoco") version "0.16.0-20190831.151000-2"
 }
+
+//junitJacoco {
+//    jacocoVersion = "0.8.2"
+//    setIgnoreProjects(ModuleDependency.LIBRARY_TEST_UTILS)
+//    excludes // type String List
+//    includeNoLocationClasses = false
+//    includeInstrumentationCoverageInMergedReport = false
+//}
 
 // all projects = root project + sub projects
 allprojects {
