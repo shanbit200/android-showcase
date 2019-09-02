@@ -21,8 +21,8 @@ buildscript {
         classpath(GradleDependency.KOTLIN)
         classpath(GradleDependency.SAFE_ARGS)
         classpath(GradleDependency.KTLINT_GRADLE)
-        classpath("com.vanniktech:gradle-android-junit-jacoco-plugin:0.15.0")
-//        classpath("com.vanniktech:gradle-android-junit-jacoco-plugin:0.16.0-20190831.151000-2")
+//        classpath("com.vanniktech:gradle-android-junit-jacoco-plugin:0.15.0")
+        classpath("com.vanniktech:gradle-android-junit-jacoco-plugin:0.16.0-20190831.151000-2")
     }
 }
 
@@ -30,8 +30,8 @@ plugins {
     id(GradlePluginId.DETEKT) version GradlePluginVersion.DETEKT
     id(GradlePluginId.KTLINT_GRADLE) version GradlePluginVersion.KTLINT_GRADLE
     id(GradlePluginId.GRADLE_VERSION_PLUGIN) version GradlePluginVersion.GRADLE_VERSION_PLUGIN
-    id("com.vanniktech.android.junit.jacoco") version "0.15.0"
-//    id("com.vanniktech.android.junit.jacoco") version "0.16.0-20190831.151000-2"
+//    id("com.vanniktech.android.junit.jacoco") version "0.15.0"
+    id("com.vanniktech.android.junit.jacoco") version "0.16.0-20190831.151000-2"
 }
 
 //junitJacoco {
