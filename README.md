@@ -126,8 +126,11 @@ These are all of the Gradle tasks (cmd commands) that are [executed by CI](.circ
 * `./gradlew testDebugUnitTest` - run unit tests
 * `./gradlew :app:bundleDebug` - create app bundle
 
-On top of that project contains custom `./gradlew staticCheck` task that mimics all CI tasks and is intended to run on
-local computer.
+## Gradle tasks
+
+* `./gradlew staticCheck` - custom task that mimics all CI tasks and is intended to run on local computer.
+* `./gradlew jacocoTestReportDebug` - generates test coverage report (`build\reports\jacoco\..`)
+* ` ./gradlew dependencyUpdates` - lists all outdated dependencies in the project
 
 ## What this project does not cover?
 
