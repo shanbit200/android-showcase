@@ -75,14 +75,6 @@ subprojects {
         config = files("${project.rootDir}/config/detekt.yml")
         parallel = true
     }
-
-    if (this.name == "feature_album") {
-        println(this.name)
-        println(this::class.java)
-
-        println("------------------")
-//    println(this.name + ": " + this.android.libraryVariants)
-    }
 }
 
 // JVM target applied to all Kotlin tasks across all sub-projects
