@@ -14,9 +14,6 @@ pluginManagement {
     // Add resolution strategy for gradle-android-junit-jacoco-plugin, so snapshot version can be properly resolved
     resolutionStrategy {
         eachPlugin {
-            println("requested.id.namespace: " + requested.id.namespace)
-            println("requested.version: " + requested.version)
-            println("--------")
             if (requested.id.namespace == "com.vanniktech.android.junit") {
                 useModule("com.vanniktech:gradle-android-junit-jacoco-plugin:${requested.version}")
             }
