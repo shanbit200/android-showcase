@@ -20,7 +20,7 @@ buildscript {
         classpath(GradleDependency.KOTLIN)
         classpath(GradleDependency.SAFE_ARGS)
         classpath(GradleDependency.KTLINT_GRADLE)
-        classpath("com.vanniktech:gradle-android-junit-jacoco-plugin:0.16.0-20190903.075709-3")
+//        classpath("com.vanniktech:gradle-android-junit-jacoco-plugin:0.16.0-20190903.075709-3")
     }
 }
 
@@ -28,9 +28,10 @@ plugins {
     id(GradlePluginId.DETEKT) version GradlePluginVersion.DETEKT
     id(GradlePluginId.KTLINT_GRADLE) version GradlePluginVersion.KTLINT_GRADLE
     id(GradlePluginId.GRADLE_VERSION_PLUGIN) version GradlePluginVersion.GRADLE_VERSION_PLUGIN
-    id("com.vanniktech.android.junit.jacoco") version "0.16.0-20190903.075709-3"
+//    id("com.vanniktech.android.junit.jacoco") version "0.16.0-20190903.075709-3"
 }
 
+/*
 junitJacoco {
     jacocoVersion = "0.8.4"
     setIgnoreProjects(ModuleDependency.LIBRARY_TEST_UTILS)
@@ -38,6 +39,7 @@ junitJacoco {
     includeNoLocationClasses = false
     includeInstrumentationCoverageInMergedReport = false
 }
+*/
 
 // all projects = root project + sub projects
 allprojects {

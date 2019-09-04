@@ -74,7 +74,7 @@ jobs:
     steps:
       - checkout
       - restore-gradle-cache
-      - run: ./gradlew jacocoTestReportDebug
+      - run: ./gradlew testDebugUnitTest
 
   build_app:
     description: An executor with sensible defaults for Android Gradle tasks (set with GRADLE_OPTS).
