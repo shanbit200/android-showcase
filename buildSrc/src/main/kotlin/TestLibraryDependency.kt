@@ -6,6 +6,7 @@ private object TestLibraryVersion {
     const val MOCKITO = "3.0.0"
     const val MOCKITO_KOTLIN = "2.1.0"
     const val ANDROID_X_TEST = "1.2.0"
+    const val ARCH_UNIT = "0.11.0"
 }
 
 object TestLibraryDependency {
@@ -20,4 +21,5 @@ object TestLibraryDependency {
     const val COROUTINES_TEST = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${CoreVersion.COROUTINES_ANDROID}"
     const val ANDROID_X_CORE_TESTING = "android.arch.core:core-testing:${TestLibraryVersion.ANDROID_X_TEST}"
     const val ANDROID_X_TEST_RULES = "androidx.test:rules:${TestLibraryVersion.ANDROID_X_TEST}"
+    const val ARCH_UNIT = "com.tngtech.archunit:archunit-junit4:${TestLibraryVersion.ARCH_UNIT}"
 }
